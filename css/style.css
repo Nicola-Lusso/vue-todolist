@@ -3,3 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#app{
+  margin: auto;
+  width: 80%;
+  height: 100vh;
+}
+
+.logo img{
+  width: 30%;
+  text-align: center;
+}

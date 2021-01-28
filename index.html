@@ -13,7 +13,21 @@
     <div id="app">
       <!-- LOGO -->
       <div class="logo">
-        <img src="" alt="">
+        <img src="https://www.boolean.careers/images/misc/logo.png" alt="">
+        <hr>
+      </div>
+
+      <div class="todo-list">
+        <input type="text" @keyUp.enter='addTodo' placeholder="Aggiungi alla lista" >
+        <button @click='addTodo'>Aggiungi</button>
+      </div>
+
+      <div class="todos-container">
+        <ul v-if='todos.length > 0'>
+          <li class='todo' v-for='(todo, index) in todos'> {{ index + 1 + ')' + todo }}</li>
+          <i></i>
+
+        </ul>
       </div>
 
     </div>
