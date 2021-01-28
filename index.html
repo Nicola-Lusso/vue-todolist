@@ -18,7 +18,7 @@
       </div>
 
       <div class="todo-list">
-        <input type="text" @keyUp.enter='addTodo' placeholder="Aggiungi alla lista" >
+        <input type="text" @keyUp.enter='addTodo' placeholder="Aggiungi alla lista" v-model='newTodo'>
         <button @click='addTodo'>Aggiungi</button>
       </div>
 

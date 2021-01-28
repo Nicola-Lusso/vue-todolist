@@ -1,6 +1,7 @@
 var app = new Vue({
   el : '#app',
   data : {
+    newTodo: '',
     todos : [
       'Fare gli esercizi',
       'Andare in palestra',
