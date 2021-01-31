@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body{
+  text-decoration: none;
+  list-style: none;
+}
+
 #app{
   margin: auto;
   width: 80%;
@@ -13,4 +18,66 @@
 .logo img{
   width: 30%;
   text-align: center;
+}
+
+.todo-list button{
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+  background-color: rgba(87, 180, 127, 0.79);
+  cursor: pointer;
+}
+
+
+.todo-list input{
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.todos-container{
+  background-color: rgba(8, 147, 156, 0.78);
+  margin: 10px 10px 0;
+  border-radius: 10px;
+
+}
+
+.todos-container li, .todos-delete li{
+  font-size: 20px;
+  padding: 10px 0;
+  list-style: none;
+  text-align: left;
+  border-bottom: 1px solid lightgrey;
+}
+
+
+
+h3{
+  padding-top: 30px;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.todos-delete {
+  margin-top: 10px;
+  background-color: rgba(141, 153, 47, 0.8);
+}
+
+.todos-delete ul li span {
+  float: right;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 30px;
+
+}
+
+.trash p{
+  color: red;
+}
+
+.delete {
+  font-size: 20px;
+  float: right;
+
 }

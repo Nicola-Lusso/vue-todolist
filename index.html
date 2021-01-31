@@ -24,13 +24,30 @@
 
       <div class="todos-container">
         <ul v-if='todos.length > 0'>
-          <li class='todo' v-for='(todo, index) in todos'> {{ index + 1 + ')' + todo }}</li>
-          <i></i>
-
+          <li class='todo' v-for='(todo, index) in todos'> {{ index + 1 + ')' + todo }}
+            <i @click='deleteTodo(index)' class="fas fa-times" :title="index"></i>
+          </li>
         </ul>
+        <h2 v-else>Lista Vuota</h2>
       </div>
 
-    </div>
+      <h3>Lista Cestino<span class="delete">Elimina tutto<i @click='deleteAll' class="fas fa-trash-alt"></i></span></h3>
+
+      <div class="todos-delete">
+        <ul v-if='todosDelete.length > 0 '>
+          <li class="todo" v-for='(todo, index) in todosDelete'>
+            {{ todo }}
+            <span @click="restoreTodo(index)">Ripristina dal cestino</span>
+            <span class="trash" @click="confirmDelete(index)"><p>Elimina definitivamente</p></span>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="deleteAll">
+        <h4>Elimina tutto<i title="Elimina tutti" class="fas fa-trash-alt" :class="todosDelete.length"  @click="deleteAll"></i></h4>
+      </div>
+
+    </div> -->
+
     <!-- Fine App/Container -->
 
 
